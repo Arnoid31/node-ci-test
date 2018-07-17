@@ -4,6 +4,9 @@ const {
     expect,
 } = require('chai');
 const superTest = require('supertest');
+const {
+    v4,
+} = require('uuid');
 
 const {
     app,
@@ -21,6 +24,14 @@ describe('PingController', () => {
                 expect(response.body).to.have.property('my_value');
                 expect(response.body.my_value).to.be.a('number');
             })
+            .end(done);
+    });
+    it('Should throw error when id is not a number', (done) => {
+        const id = v4();
+
+        superTest(app)
+            .get(`/ping/${id}`)
+            .expect(500)
             .end(done);
     });
 });
