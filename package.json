@@ -4,7 +4,8 @@
   "description": "Just a repo to test Jenkins/Blue Ocean",
   "main": "src/index.js",
   "scripts": {
-    "cover": "nyc --reporter=lcov --reporter=html npm test",
+    "cover": "nyc npm test",
+    "lint": "eslint src/ test/",
     "test": "mocha --recursive --exit test/"
   },
   "repository": {
@@ -28,6 +29,7 @@
   "homepage": "https://github.com/Arnoid31/node-ci-test#readme",
   "devDependencies": {
     "chai": "4.1.2",
+    "eslint": "5.1.0",
     "mocha": "5.2.0",
     "nyc": "12.0.2",
     "supertest": "3.1.0",
