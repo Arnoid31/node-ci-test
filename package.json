@@ -1,0 +1,38 @@
+{
+  "name": "node-ci-test",
+  "version": "0.0.1",
+  "description": "Just a repo to test Jenkins/Blue Ocean",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --recursive --exit test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arnoid31/node-ci-test.git"
+  },
+  "keywords": [
+    "ci",
+    "jenkins",
+    "blue-ocean",
+    "node",
+    "nodejs",
+    "jenkinsfile",
+    "test"
+  ],
+  "author": "Arnaud Commelin<arnaud.commelin@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Arnoid31/node-ci-test/issues"
+  },
+  "homepage": "https://github.com/Arnoid31/node-ci-test#readme",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "5.2.0",
+    "nyc": "12.0.2",
+    "supertest": "3.1.0"
+  },
+  "dependencies": {
+    "express": "4.16.3",
+    "joi": "13.4.0"
+  }
+}
