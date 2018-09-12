@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 
