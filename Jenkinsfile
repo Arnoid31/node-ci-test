@@ -21,12 +21,17 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './scripts/install.sh'
+                sh './scripts/cover.sh'
             }
         }
         stage('Cover') {
             steps {
                 sh './scripts/cover.sh'
+            }
+        }
+        stage('Merge') {
+            steps {
+                sh './scripts/merge.sh'
             }
         }
     }
